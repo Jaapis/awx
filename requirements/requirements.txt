@@ -154,7 +154,9 @@ django==4.2.24
     #   django-polymorphic
     #   django-solo
     #   djangorestframework
+    #   drf-spectacular
     #   social-auth-app-django
+# django-ansible-base @ git+https://github.com/ansible/django-ansible-base@devel  # git requirements installed separately
     # via -r /awx_devel/requirements/requirements_git.txt
 django-auth-ldap==5.1.0
     # via -r /awx_devel/requirements/requirements.in
@@ -186,9 +188,14 @@ djangorestframework==3.15.2
     # via
     #   -r /awx_devel/requirements/requirements.in
     #   django-ansible-base
+    #   drf-spectacular
 djangorestframework-yaml==2.0.0
     # via -r /awx_devel/requirements/requirements.in
-dynaconf==3.2.10
+drf-spectacular==0.29.0
+    # via -r /awx_devel/requirements/requirements.in
+durationpy==0.10
+    # via kubernetes
+dynaconf==3.2.11
     # via
     #   -r /awx_devel/requirements/requirements.in
     #   django-ansible-base
@@ -237,8 +244,10 @@ incremental==24.7.2
 inflect==7.0.0
     # via jaraco-text
 inflection==0.5.1
-    # via django-ansible-base
-irc==20.3.1
+    # via
+    #   django-ansible-base
+    #   drf-spectacular
+irc==20.5.0
     # via -r /awx_devel/requirements/requirements.in
 isodate==0.6.1
     # via
@@ -274,9 +283,11 @@ jq==1.8.0
     # via -r /awx_devel/requirements/requirements.in
 json-log-formatter==0.5.2
     # via -r /awx_devel/requirements/requirements.in
-jsonschema==4.21.1
-    # via -r /awx_devel/requirements/requirements.in
-jsonschema-specifications==2023.12.1
+jsonschema==4.25.1
+    # via
+    #   -r /awx_devel/requirements/requirements.in
+    #   drf-spectacular
+jsonschema-specifications==2025.9.1
     # via jsonschema
 jwcrypto==1.5.4
     # via django-oauth-toolkit
@@ -468,6 +479,7 @@ pyyaml==6.0.2
     #   -r /awx_devel/requirements/requirements.in
     #   ansible-runner
     #   djangorestframework-yaml
+    #   drf-spectacular
     #   kubernetes
     #   receptorctl
 pyzstd==0.15.10
@@ -584,7 +596,9 @@ typing-extensions==4.9.0
     #   pygithub
     #   setuptools-scm
     #   twisted
-urllib3==1.26.20
+uritemplate==4.2.0
+    # via drf-spectacular
+urllib3==2.3.0
     # via
     #   -r /awx_devel/requirements/requirements.in
     #   botocore
