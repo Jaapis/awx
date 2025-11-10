@@ -26,9 +26,6 @@ jobs:
           - name: api-lint
             command: /var/lib/awx/venv/awx/bin/tox -e linters
             coverage-upload-name: ""
-          - name: api-swagger
-            command: /start_tests.sh swagger
-            coverage-upload-name: ""
           - name: awx-collection
             command: /start_tests.sh test_collection_all
           - name: api-schema

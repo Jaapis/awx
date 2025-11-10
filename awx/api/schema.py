@@ -14,7 +14,10 @@ class CustomAutoSchema(AutoSchema):
     def get_tags(self):
         tags = []
         try:
-            serializer = self.view.get_serializer()
+            if hasattr(self.view, 'get_serializer'):
+                serializer = self.view.get_serializer()
+            else:
+                serializer = None
         except Exception:
             serializer = None
             warnings.warn(

@@ -155,7 +155,6 @@ django==4.2.24
     #   django-solo
     #   djangorestframework
     #   drf-spectacular
-    #   social-auth-app-django
 # django-ansible-base @ git+https://github.com/ansible/django-ansible-base@devel  # git requirements installed separately
     # via -r /awx_devel/requirements/requirements_git.txt
 django-auth-ldap==5.1.0
